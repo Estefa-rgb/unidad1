@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">appunidad01</string>
+    <string name="strtitulo">Primer Aplicacion Movil</string>
+    <string name="strtunombre"> ¿cual es tu nombre ?</string>
+    <string name="strpulsar"> Dar Click </string>
+    <string name="strlimpiar">Limpiar</string>
+    <string name="strcerrar">Cerrar</string>
 </resources>
