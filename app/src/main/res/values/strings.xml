@@ -1,8 +1,28 @@
 <resources>
-    <string name="app_name">appunidad01</string>
-    <string name="strtitulo">Primer Aplicacion Movil</string>
-    <string name="strtunombre"> ¿cual es tu nombre ?</string>
-    <string name="strpulsar"> Dar Click </string>
+
+    <string name="app_name">My Application</string>
+
+    <!-- MainActivity -->
+    <string name="strtitulo">Primer aplicacion movil</string>
+    <string name="strtunombre">Cual es tu nombre?</string>
+    <string name="strpulsar">Dar click</string>
     <string name="strlimpiar">Limpiar</string>
     <string name="strcerrar">Cerrar</string>
+
+    <!-- App Menu -->
+    <string name="alumno">Maria Estefanía Huerta</string>
+    <string name="matricula">2023030545</string>
+    <string name="materia">Programacion movil</string>
+
+    <!-- Cards -->
+    <string name="strHola">Hola</string>
+    <string name="strImc">IMC</string>
+    <string name="strConGrados">Grados</string>
+    <string name="strConMonedas">Monedas</string>
+    <string name="strCotizacion">Cotizacion</string>
+    <string name="strSpinner">Spinner</string>
+
 </resources>
+
+
+

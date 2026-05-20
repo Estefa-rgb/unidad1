@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -12,53 +12,53 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/fondo_layout"
-        android:paddingLeft="16sp"
-        android:paddingRight="16sp"
-        android:paddingBottom="16sp"
-        android:paddingVertical="15sp">
+        android:padding="16dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/fondo_titulo"
+            android:gravity="center"
+            android:padding="10dp"
             android:text="@string/strtitulo"
             android:textColor="@color/red"
             android:textSize="30sp"
-            android:gravity="center"
-            android:textStyle="bold">
-        </TextView>
+            android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/txtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:hint="@string/strtunombre"
-            android:background="@drawable/fondo_titulo"
-            android:inputType="text"
-            android:id="@+id/txtNombr">
-        </EditText>
+            android:inputType="textPersonName" />
+
         <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"></Space>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/strpulsar"
-            android:id="@+id/btnPulsar">
-        </Button>
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btnPulsar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/strlimpiar"
-            android:id="@+id/btnLimpiar">
-        </Button>
+            android:text="@string/strpulsar" />
 
         <Button
+            android:id="@+id/btnLimpiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/strcerrar"
-            android:id="@+id/btnCerrar">
-        </Button>
+            android:layout_marginTop="10dp"
+            android:text="@string/strlimpiar" />
+
+        <Button
+            android:id="@+id/btnCerrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/strcerrar" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
