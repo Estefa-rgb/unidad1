@@ -10,6 +10,7 @@
     <string name="strcerrar">Cerrar</string>
 
     <!-- App Menu -->
+    <string name="nombreEmpresa">UPSIN</string>
     <string name="alumno">Maria Estefanía Huerta</string>
     <string name="matricula">2023030545</string>
     <string name="materia">Programacion movil</string>
@@ -21,6 +22,19 @@
     <string name="strConMonedas">Monedas</string>
     <string name="strCotizacion">Cotizacion</string>
     <string name="strSpinner">Spinner</string>
+    <string name="strconMonedas">Monedas</string>
+    <string name="strpre1">PreExamen1</string>
+    <string name="strpre2">PreExamen2</string>
+    <string name="strCalcular">Calcular</string>
+
+    <string name="strAltura">Altura Ej. 1.80</string>
+    <string name="strPeso">Peso Ej. 90.5kg</string>
+    <string name="strResultado">Su resultado aqui</string>
+
+
+
+
+
 
 </resources>
 

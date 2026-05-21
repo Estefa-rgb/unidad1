@@ -42,9 +42,17 @@ class appMenu : AppCompatActivity() {
         crvSpinner = findViewById(R.id.crvSpinner)
     }
 
+    // ¡Aquí está la función corregida! Una sola función con ambos clics adentro.
     private fun eventoClick() {
+        // Clic para ir a la app de Saludo
         crvHola.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Clic para ir a la app de IMC
+        crvImc.setOnClickListener {
+            val intent = Intent(this, appimc::class.java)
             startActivity(intent)
         }
     }
