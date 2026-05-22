@@ -1,13 +1,18 @@
 package com.example.appunidad01
 
+import android.app.Dialog
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 
 class appimc : AppCompatActivity() {
 
@@ -17,6 +22,7 @@ class appimc : AppCompatActivity() {
     private lateinit var btnCalcular: Button
     private lateinit var btnLimpiar: Button
     private lateinit var btnCerrar: Button
+    private lateinit var imgPeso: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,61 +46,56 @@ class appimc : AppCompatActivity() {
         btnCalcular = findViewById(R.id.btnCalcular)
         btnLimpiar = findViewById(R.id.btnLimpiar)
         btnCerrar = findViewById(R.id.btnCerrar)
+        imgPeso = findViewById<ImageView>(R.id.image)
     }
 
-    private fun eventosClick() {
+    fun eventosClick() {
         btnCalcular.setOnClickListener {
-            val alturaStr = txtAltura.text.toString()
-            val pesoStr = txtPeso.text.toString()
-
-            var esValido = true
-
-            if (alturaStr.isEmpty()) {
-                txtAltura.error = "La altura es obligatoria"
-                esValido = false
-            } else {
-                val alturaNum = alturaStr.toFloatOrNull()
-                if (alturaNum == null || alturaNum <= 0) {
-                    txtAltura.error = "Ingresa una altura válida (ej. 1.75)"
-                    esValido = false
-                }
+            if (txtAltura.text.toString().contentEquals("") ||
+                txtPeso.text.toString().contentEquals("") ||
+                txtPeso.text.toString().toFloat() <= 0 ||
+                txtAltura.text.toString().toFloat() <= 0
+            ) {
+                Toast.makeText(
+                    applicationContext,
+                    "Falto capturar la altura o el peso",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
             }
+            var altura: Float = txtAltura.text.toString().toFloat()
+            var peso: Float = txtPeso.text.toString().toFloat()
+            var imc: Float = 0.0f
+            imc = peso / (altura * altura)
+            txtRes.text = imc.toString();
 
-            if (pesoStr.isEmpty()) {
-                txtPeso.error = "El peso es obligatorio"
-                esValido = false
-            } else {
-                val pesoNum = pesoStr.toFloatOrNull()
-                if (pesoNum == null || pesoNum <= 0) {
-                    txtPeso.error = "Ingresa un peso válido"
-                    esValido = false
-                }
-            }
+            if (imc < 18.5) imgPeso.setImageResource(R.mipmap.bajopeso)
+            if (imc >= 18.5 && imc < 24.9) imgPeso.setImageResource(R.mipmap.pesonormal)
+            if (imc >= 25 && imc < 29.9) imgPeso.setImageResource(R.mipmap.sobrepeso)
+            if (imc >= 30) imgPeso.setImageResource(R.mipmap.obesidad)
 
-            // 3. Si todo está correcto, hacemos el cálculo matemático
-            if (esValido) {
-                val altura = alturaStr.toFloat()
-                val peso = pesoStr.toFloat()
-
-                val imc = peso / (altura * altura)
-                txtRes.text = "Tu IMC es: ${String.format("%.2f", imc)}"
-            } else {
-                txtRes.text = "Verifica los datos en rojo"
-            }
         }
-
         btnLimpiar.setOnClickListener {
-            txtAltura.text.clear()
-            txtPeso.text.clear()
-
-            txtAltura.error = null
-            txtPeso.error = null
-
-            txtRes.text = "Su resultado aparecerá aquí"
+            imgPeso.setImageResource(R.mipmap.categorias)
+            txtAltura.setText("")
+            txtPeso.setText("")
+            txtRes.setText("")
         }
 
-        btnCerrar.setOnClickListener {
-            finish()
-        }
+        btnCerrar.setOnClickListener(View.OnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("AppImc")
+            builder.setMessage("Deseas Cerrar la Aplicacion?")
+            builder.setPositiveButton("Aceptar") { Dialog, wich ->
+                finish()
+            }
+            builder.setNegativeButton("Cancelar") { Dialog, wich ->
+                Toast.makeText(
+                    applicationContext, "Continuamos en la app",
+                    Toast.LENGTH_SHORT).show()
+            }
+            builder.show()
+
+        })
     }
 }

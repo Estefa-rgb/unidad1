@@ -65,9 +65,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:rowCount="4"
+            android:rowCount="6"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false">
+
+            <!-- HOLA -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvHola"
@@ -97,8 +99,11 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <!-- IMC -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvImc"
@@ -128,8 +133,11 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <!-- GRADOS -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvGrados"
@@ -159,8 +167,11 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <!-- MONEDAS -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvMonedas"
@@ -190,8 +201,11 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <!-- COTIZACION -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvCotizacion"
@@ -221,8 +235,11 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <!-- SPINNER -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvSpinner"
@@ -243,7 +260,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@mipmap/salir" />
+                        android:src="@mipmap/spinner" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -252,11 +269,48 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- EXAMEN -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvPreExamen1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@mipmap/examen1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Examen"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- PRE EXAMEN 1 -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crvPreExamen2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -283,8 +337,11 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <!-- PRE EXAMEN 2 -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvPreExamen2"
@@ -314,6 +371,41 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SALIR -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crvSalir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@mipmap/salir" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salir"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
