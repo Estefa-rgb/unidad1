@@ -30,9 +30,11 @@
     <string name="strAltura">Altura Ej. 1.80</string>
     <string name="strPeso">Peso Ej. 90.5kg</string>
     <string name="strResultado">Su resultado aqui</string>
-
-
-
+    <string name="strCel">Celicius a Fahrenheit</string>
+    <string name="strFah">Fahrenheit a Celcius</string>
+    <string name="strGrados">Grados</string>
+    <string name="strCantidad">Cantidad</string>
+    <string name="strMensaje">Falto capturar Cantidad</string>
 
 
 

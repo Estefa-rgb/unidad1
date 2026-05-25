@@ -64,6 +64,11 @@ class appMenu : AppCompatActivity() {
             startActivity(intent)
         }
 
+        crvGrados.setOnClickListener {
+            val intent = Intent(this, appGrados::class.java)
+            startActivity(intent)
+        }
+
         crvSalir.setOnClickListener {
             val builder = AlertDialog.Builder(this)
 

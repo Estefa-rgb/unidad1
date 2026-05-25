@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appunidad01">
         <activity
+            android:name=".appGrados"
+            android:exported="false" />
+        <activity
             android:name=".appimc"
             android:exported="false" />
         <activity
