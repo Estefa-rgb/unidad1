@@ -50,6 +50,18 @@
     <string name="strCantidadP">Cantidad de Pesos</string>
     <string name="strBtnConvertir">Convertir</string>
 
+    <string name="strOpBasicas">Operaciones Básicas</string>
+    <string name="strNum1">Ingrese número 1</string>
+    <string name="strNum2">Ingrese número 2</string>
+    <string-array name="operaciones">
+        <item>Suma</item>
+        <item>Resta</item>
+        <item>Multiplicación</item>
+        <item>División</item>
+    </string-array>
+    <string name="strErrorVacio">Faltan números por capturar</string>
+    <string name="strErrorCero">El número no puede ser cero</string>
+    <string name="strMenOperaciones">¿Deseas cerrar la aplicación de operaciones?</string>
 
 
 </resources>

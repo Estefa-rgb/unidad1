@@ -10,6 +10,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -45,7 +46,7 @@ class appMonedas : AppCompatActivity() {
         btnSalir = findViewById<Button>(R.id.btnSalir)
         btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
 
-        //obtener los datos del array-sring para ponerlo en el adapter
+
         val items= resources.getStringArray(R.array.monedas)
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, items)
         spnMonedas.adapter = adapter
@@ -63,7 +64,7 @@ class appMonedas : AppCompatActivity() {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                // Se deja vacio para que no marque error
+
             }
         }
 
@@ -100,7 +101,20 @@ class appMonedas : AppCompatActivity() {
         }
 
         btnSalir.setOnClickListener {
-            finish()
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle(getString(R.string.strConMonedas))
+            builder.setMessage(getString(R.string.strMenSalir))
+
+            builder.setPositiveButton(getString(R.string.strcerrar)) { _, _ ->
+                finish()
+            }
+
+            builder.setNegativeButton("Cancelar") { dialog, _ ->
+                dialog.dismiss()
+            }
+
+            builder.show()
         }
     }
 }
