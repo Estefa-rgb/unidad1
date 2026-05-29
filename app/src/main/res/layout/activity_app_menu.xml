@@ -375,7 +375,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- SALIR -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvSalir"
