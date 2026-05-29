@@ -119,7 +119,6 @@ class appOperaciones : AppCompatActivity() {
                 finish()
             }
 
-            // Aquí está el cambio: se usa la palabra "Cancelar" directamente
             builder.setNegativeButton("Cancelar") { dialog, _ ->
                 dialog.dismiss()
             }

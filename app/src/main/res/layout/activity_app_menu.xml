@@ -69,8 +69,6 @@
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false">
 
-            <!-- HOLA -->
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvHola"
                 android:layout_width="0dp"
@@ -102,8 +100,6 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- IMC -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvImc"
@@ -137,8 +133,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- GRADOS -->
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvGrados"
                 android:layout_width="0dp"
@@ -170,8 +164,6 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- MONEDAS -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvMonedas"
@@ -205,8 +197,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- COTIZACION -->
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvCotizacion"
                 android:layout_width="0dp"
@@ -238,8 +228,6 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- SPINNER -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvSpinner"
@@ -273,10 +261,8 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- EXAMEN -->
-
             <androidx.cardview.widget.CardView
-                android:id="@+id/crvPreExamen1"
+                android:id="@+id/crvExamen"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -307,10 +293,8 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- PRE EXAMEN 1 -->
-
             <androidx.cardview.widget.CardView
-                android:id="@+id/crvPreExamen2"
+                android:id="@+id/crvPreExamen1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -340,8 +324,6 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- PRE EXAMEN 2 -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crvPreExamen2"
