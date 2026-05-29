@@ -94,5 +94,9 @@ class appMenu : AppCompatActivity() {
 
             builder.show()
         }
+        crvPreExamen1.setOnClickListener {
+            val intent = Intent(this, appOperaciones::class.java)
+            startActivity(intent)
+        }
     }
 }
