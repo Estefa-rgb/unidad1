@@ -13,7 +13,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import kotlin.text.Typography.euro
 
 class appMonedas : AppCompatActivity() {
     private lateinit var txtCantidad : EditText
@@ -21,9 +20,8 @@ class appMonedas : AppCompatActivity() {
     private lateinit var txtResultado: TextView
     private lateinit var btnConvertir : Button
     private lateinit var btnLimpiar : Button
-    private lateinit var btnCerrar : Button
+    private lateinit var btnSalir : Button
     private var pos : Int =0
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +29,6 @@ class appMonedas : AppCompatActivity() {
         setContentView(R.layout.activity_app_monedas)
         iniciarComponentes()
         eventoClic()
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -41,22 +38,20 @@ class appMonedas : AppCompatActivity() {
     }
 
     fun iniciarComponentes(){
-
         txtCantidad = findViewById<EditText>(R.id.txtCantidad)
         txtResultado = findViewById<TextView>(R.id.txtResultado)
         spnMonedas = findViewById<Spinner>(R.id.spnMonedas)
         btnConvertir = findViewById<Button>(R.id.btnConvertir)
-        btnCerrar = findViewById<Button>(R.id.btnCerrar)
+        btnSalir = findViewById<Button>(R.id.btnSalir)
         btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
-        //obtener los datos del array-sring para ponerlo en el adapter
 
+        //obtener los datos del array-sring para ponerlo en el adapter
         val items= resources.getStringArray(R.array.monedas)
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, items)
         spnMonedas.adapter = adapter
     }
 
     fun eventoClic(){
-
         //buscar la posición del elemento seleccionado
         spnMonedas.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
@@ -68,38 +63,44 @@ class appMonedas : AppCompatActivity() {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
+                // Se deja vacio para que no marque error
             }
         }
 
         btnConvertir.setOnClickListener {
             //validar
-
             if (txtCantidad.text.toString().contentEquals("")){
-
                 Toast.makeText(this,R.string.strMensaje,
                     Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            var dolarA : Float = R.string.dolarA.toString().toFloat()
-            var dolarC : Float = R.string.dolarC.toString().toFloat()
-            var  euro : Float = R.string.euro.toString().toFloat()
-            var libra : Float = R.string.libra.toString().toFloat()
-            var cantMx : Float = txtCantidad. text.toString().toFloat()
+            var dolarA : Float = getString(R.string.dolarA).toFloat()
+            var dolarC : Float = getString(R.string.dolarC).toFloat()
+            var euro : Float = getString(R.string.euro).toFloat()
+            var libra : Float = getString(R.string.libra).toFloat()
+            var cantMx : Float = txtCantidad.text.toString().toFloat()
 
             var resultado = when(pos){
                 0-> cantMx/dolarA
                 1-> cantMx/dolarC
-                2-> cantMx/ euro
+                2-> cantMx/euro
                 3-> cantMx/libra
                 else -> 0.0f
             }
             txtResultado.setText(resultado.toString())
-
         }
 
+        btnLimpiar.setOnClickListener {
+            txtCantidad.setText("")
+            txtResultado.setText(R.string.strResultado)
+            spnMonedas.setSelection(0)
+            pos = 0
+            txtCantidad.requestFocus()
+        }
 
+        btnSalir.setOnClickListener {
+            finish()
+        }
     }
-
 }

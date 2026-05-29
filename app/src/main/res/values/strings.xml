@@ -41,6 +41,7 @@
         <item>Euro</item>
         <item>Libras Esterlinas</item>
     </string-array>
+    <string name="strMenSalir">¿Deseas cerrar el convertidor de monedas?</string>
     <string name="dolarA">17.40</string>
     <string name="dolarC">18.50</string>
     <string name="euro">21.45</string>
