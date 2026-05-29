@@ -30,3 +30,19 @@ class appOperaciones : AppCompatActivity() {
             insets
         }
     }
+
+    fun iniciarComponentes(){
+        txtNum1 = findViewById<EditText>(R.id.txtNum1)
+        txtNum2 = findViewById<EditText>(R.id.txtNum2)
+        spnOperaciones = findViewById<Spinner>(R.id.spnOperaciones)
+        txtResultado = findViewById<TextView>(R.id.txtResultado)
+        imgOperacion = findViewById<ImageView>(R.id.imgOperacion)
+        btnCalcular = findViewById<Button>(R.id.btnCalcular)
+        btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
+        btnCerrar = findViewById<Button>(R.id.btnCerrar)
+
+        //obtener los datos del array-sring para ponerlo en el adapter
+        val items = resources.getStringArray(R.array.operaciones)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
+        spnOperaciones.adapter = adapter
+    }
