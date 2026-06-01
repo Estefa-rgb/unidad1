@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appunidad01">
         <activity
+            android:name=".appCotizacion"
+            android:exported="false" />
+        <activity
             android:name=".appOperaciones"
             android:exported="false" />
         <activity
