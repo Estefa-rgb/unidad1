@@ -98,5 +98,11 @@ class appMenu : AppCompatActivity() {
             val intent = Intent(this, appOperaciones::class.java)
             startActivity(intent)
         }
+
+        crvCotizacion.setOnClickListener {
+            val intent = Intent(this, clienteActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
+

@@ -14,5 +14,6 @@
     <color name="titulo">#3F51B5</color>
     <color name="subtitle">#767474</color>
     <color name="acentuar">#FF4081</color>
+    <color name="rojo">#FF0000</color>
 
 </resources>
