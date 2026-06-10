@@ -78,6 +78,25 @@
     <string name="tfin">Total a Financiar</string>
     <string name="desImaCot">Logo Toyota</string>
 
+    <!-- app_calculoNomina -->
+
+    <string name="titulo_nomina">Cálculo de pago de nomina</string>
+    <string name="nombre_trabajador_nom">Nombre del Trabajador</string>
+    <string name="hint_evaristo">Evaristo Toscano</string>
+    <string name="num_recibo">Número de recibo</string>
+    <string name="nombre_empleado_nom">Nombre</string>
+    <string name="horas_normales">Horas trabajadas</string>
+    <string name="horas_extras">Horas Extras</string>
+    <string name="puesto_label">Puesto</string>
+    <string name="puesto_auxiliar">Auxiliar</string>
+    <string name="puesto_albanil">Albañil</string>
+    <string name="puesto_ing">Ing. Obra</string>
+    <string name="label_subtotal">Subtotal: </string>
+    <string name="label_impuesto">Impuesto: </string>
+    <string name="label_total">Total a pagar: </string>
+    <string name="btn_entrar_nom">Entrar</string>
+    <string name="btn_salir_nom">Salir</string>
+    <string name="btn_regresar_nom">Regresar</string>
 </resources>
 
 

@@ -1,4 +1,4 @@
-package com.example.appunidad01.com.example.appunidad01
+package com.example.appunidad01
 
 class ReciboNomina (
     var numRecibo: Int,
