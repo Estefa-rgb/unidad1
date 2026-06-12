@@ -67,7 +67,19 @@ class ReciboNominaActivity : AppCompatActivity() {
         }
 
         btnRegresar.setOnClickListener {
-            finish()
+            val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+            builder.setTitle("Regresar")
+            builder.setMessage("¿Desea regresar?")
+
+            builder.setPositiveButton("Regresar") { dialog, which ->
+                finish()
+            }
+
+            builder.setNegativeButton("Cancelar") { dialog, which ->
+                dialog.dismiss()
+            }
+
+            builder.show()
         }
     }
 }
