@@ -26,8 +26,21 @@ class calculoNomina : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
         btnSalirExamen2.setOnClickListener {
-            finish()
+            val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+            builder.setTitle("Salir")
+            builder.setMessage("¿De verdad deseas salir?")
+
+            builder.setPositiveButton("Cerrar") { dialog, which ->
+                finish()
+            }
+
+            builder.setNegativeButton("Cancelar") { dialog, which ->
+                dialog.dismiss()
+            }
+
+            builder.show()
         }
 
     }
