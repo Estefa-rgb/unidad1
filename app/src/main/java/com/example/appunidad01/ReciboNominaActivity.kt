@@ -4,12 +4,13 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-
 class ReciboNominaActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recibo_nomina)
 
+        val lblNombreTrabajadorFijo = findViewById<TextView>(R.id.lblNombreTrabajadorFijo)
         val txtNumRecibo = findViewById<EditText>(R.id.txtNumRecibo)
         val txtNombreEmpleado = findViewById<EditText>(R.id.txtNombreEmpleado)
         val txtHorasNormales = findViewById<EditText>(R.id.txtHorasNormales)
@@ -24,14 +25,19 @@ class ReciboNominaActivity : AppCompatActivity() {
         val btnLimpiar = findViewById<Button>(R.id.btnLimpiar)
         val btnRegresar = findViewById<Button>(R.id.btnRegresar)
 
+        // 1. Generar y asignar número de recibo automático (ej. del 1000 al 9999)
+        val numeroGenerado = (1000..9999).random()
+        txtNumRecibo.setText(numeroGenerado.toString())
+
+        // 2. Colocar el nombre que viene del Intent en el TextView FIJO de arriba
         val nombreIntent = intent.getStringExtra("NOMBRE_TRABAJADOR")
         if (!nombreIntent.isNullOrEmpty()) {
-            txtNombreEmpleado.setText(nombreIntent)
+            lblNombreTrabajadorFijo.text = nombreIntent
         }
 
         btnCalcular.setOnClickListener {
-            if (txtNumRecibo.text.isEmpty() || txtNombreEmpleado.text.isEmpty() ||
-                txtHorasNormales.text.isEmpty() || txtHorasExtras.text.isEmpty()) {
+            // Validamos que los campos editables no estén vacíos
+            if (txtNombreEmpleado.text.isEmpty() || txtHorasNormales.text.isEmpty() || txtHorasExtras.text.isEmpty()) {
                 Toast.makeText(this, "Todos los datos son requeridos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -56,8 +62,7 @@ class ReciboNominaActivity : AppCompatActivity() {
         }
 
         btnLimpiar.setOnClickListener {
-            txtNumRecibo.text.clear()
-            txtNombreEmpleado.text.clear()
+            // No limpiamos el número de recibo ni el nombre, solo las horas y resultados
             txtHorasNormales.text.clear()
             txtHorasExtras.text.clear()
             rgbPuestos.check(R.id.rdbAuxiliar)

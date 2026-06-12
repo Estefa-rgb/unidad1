@@ -13,11 +13,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:text="@string/titulo_nomina"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/lblNombreTrabajadorFijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="#FF0000"
+            android:layout_marginBottom="24dp"/>
 
         <EditText
             android:id="@+id/txtNumRecibo"
@@ -25,6 +35,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/num_recibo"
             android:inputType="number"
+            android:enabled="false"
             android:layout_marginBottom="12dp"/>
 
         <EditText
