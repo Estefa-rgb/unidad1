@@ -26,9 +26,9 @@ class calculoNomina : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
         btnSalirExamen2.setOnClickListener {
             finish()
         }
+
     }
 }

@@ -98,6 +98,10 @@ class appMenu : AppCompatActivity() {
             val intent = Intent(this, appOperaciones::class.java)
             startActivity(intent)
         }
+        crvPreExamen2.setOnClickListener {
+            val intent = Intent(this, calculoNomina::class.java)
+            startActivity(intent)
+        }
 
         crvCotizacion.setOnClickListener {
             val intent = Intent(this, clienteActivity::class.java)

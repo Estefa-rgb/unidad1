@@ -82,7 +82,7 @@
 
     <string name="titulo_nomina">Cálculo de pago de nomina</string>
     <string name="nombre_trabajador_nom">Nombre del Trabajador</string>
-    <string name="hint_evaristo">Evaristo Toscano</string>
+    <string name="hint_evaristo">Ej. Evaristo Toscano</string>
     <string name="num_recibo">Número de recibo</string>
     <string name="nombre_empleado_nom">Nombre</string>
     <string name="horas_normales">Horas trabajadas</string>

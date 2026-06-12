@@ -10,9 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Appunidad01">
-        <activity
-            android:name=".PreExamen2MainActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ReciboNominaActivity"
             android:exported="false" />
