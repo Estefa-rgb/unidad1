@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appunidad01">
         <activity
+            android:name=".CuentBanco"
+            android:exported="false" />
+        <activity
             android:name=".appBanco"
             android:exported="false" />
         <activity
