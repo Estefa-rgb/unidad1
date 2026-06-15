@@ -7,6 +7,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class CuentBancoActivity : AppCompatActivity() {
@@ -28,11 +29,17 @@ class CuentBancoActivity : AppCompatActivity() {
 
         val btnRegistrar = findViewById<Button>(R.id.btnRegistrar)
         val btnAplicar = findViewById<Button>(R.id.btnAplicar)
+        val btnSalir = findViewById<Button>(R.id.btnSalir)
 
         val usuario = intent.getStringExtra("usuario") ?: ""
         lblNombre.text = "Usuario: $usuario"
 
         btnRegistrar.setOnClickListener {
+            if (miCuenta != null) {
+                Toast.makeText(this, "La cuenta ya está registrada en esta sesión", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val numCuenta = txtNumCuenta.text.toString()
             val nombre = txtNombreCliente.text.toString()
             val banco = txtBanco.text.toString()
@@ -46,6 +53,8 @@ class CuentBancoActivity : AppCompatActivity() {
             miCuenta = CuentaBanco(numCuenta, nombre, banco, saldoStr.toFloat())
             tvNuevoSaldo.text = "Nuevo Saldo: $${miCuenta!!.obtenerSaldo()}"
             Toast.makeText(this, "Cuenta registrada", Toast.LENGTH_SHORT).show()
+
+            btnRegistrar.isEnabled = false
         }
 
         btnAplicar.setOnClickListener {
@@ -82,6 +91,19 @@ class CuentBancoActivity : AppCompatActivity() {
 
             tvNuevoSaldo.text = "Nuevo Saldo: $${miCuenta!!.obtenerSaldo()}"
             txtCantidad.text.clear()
+        }
+
+        btnSalir.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Salir")
+            builder.setMessage("¿Realmente quieres salir?")
+            builder.setPositiveButton("Sí") { dialog, which ->
+                finish()
+            }
+            builder.setNegativeButton("No") { dialog, which ->
+                dialog.dismiss()
+            }
+            builder.show()
         }
     }
 }

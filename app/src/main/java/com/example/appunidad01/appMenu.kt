@@ -46,7 +46,7 @@ class appMenu : AppCompatActivity() {
         crvMonedas = findViewById(R.id.crvMonedas)
         crvCotizacion = findViewById(R.id.crvCotizacion)
         crvSpinner = findViewById(R.id.crvSpinner)
-        crvExamen = findViewById(R.id.crvPreExamen1)
+        crvExamen = findViewById(R.id.crvExamen)
         crvPreExamen1 = findViewById(R.id.crvPreExamen1)
         crvPreExamen2 = findViewById(R.id.crvPreExamen2)
         crvSalir = findViewById(R.id.crvSalir)
@@ -109,9 +109,12 @@ class appMenu : AppCompatActivity() {
         }
 
         crvExamen.setOnClickListener {
-            val intent = Intent(this, CuentBancoActivity::class.java)
+            val intent = Intent(this, appBanco::class.java)
             startActivity(intent)
         }
-    }
+
+        }
+
+
 }
 
