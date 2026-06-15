@@ -99,11 +99,13 @@
     <string name="btn_regresar_nom">Regresar</string>
 
     <!-- appBanco-->
-    <string name="user">admin</string>
-    <string name="pass">1234</string>
-    <string name="banco">Banorte</string>
+    <string name="name_app">Examen</string>
+    <string name="user_banco">admin</string>
+    <string name="pass_banco">1234</string>
+    <string name="nombre_banco">Banorte</string>
     <string name="domicilio_banco">av del sol 34</string>
-    <string-array name="movimientos">
+
+    <string-array name="movimientos_banco">
         <item>Consultar</item>
         <item>Retirar</item>
         <item>Depositar</item>

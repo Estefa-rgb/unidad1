@@ -1,9 +1,10 @@
-package com.example.appunidad01;
+package com.example.appunidad01
+
 class CuentaBanco(
-        var numCuenta: String,
-        var nombre: String,
-        var banco: String,
-        var saldo: Float
+    var numCuenta: String,
+    var nombre: String,
+    var banco: String,
+    var saldo: Float
 ) {
     fun obtenerSaldo(): Float {
         return saldo

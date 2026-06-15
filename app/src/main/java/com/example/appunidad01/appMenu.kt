@@ -107,6 +107,11 @@ class appMenu : AppCompatActivity() {
             val intent = Intent(this, clienteActivity::class.java)
             startActivity(intent)
         }
+
+        crvExamen.setOnClickListener {
+            val intent = Intent(this, CuentBancoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
 

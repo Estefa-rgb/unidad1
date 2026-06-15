@@ -39,7 +39,7 @@ class CuentBancoActivity : AppCompatActivity() {
             val saldoStr = txtSaldo.text.toString()
 
             if (numCuenta.isEmpty() || nombre.isEmpty() || banco.isEmpty() || saldoStr.isEmpty()) {
-                Toast.makeText(this, "Faltan datos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Por favor captura todos los datos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
