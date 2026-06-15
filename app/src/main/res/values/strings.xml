@@ -98,6 +98,17 @@
     <string name="btn_salir_nom">Salir</string>
     <string name="btn_regresar_nom">Regresar</string>
 
+    <!-- appBanco-->
+    <string name="user">admin</string>
+    <string name="pass">1234</string>
+    <string name="banco">Banorte</string>
+    <string name="domicilio_banco">av del sol 34</string>
+    <string-array name="movimientos">
+        <item>Consultar</item>
+        <item>Retirar</item>
+        <item>Depositar</item>
+    </string-array>
+
 </resources>
 
 
